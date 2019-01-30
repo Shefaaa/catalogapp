@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Delete Item</h1>
+		</div>
+	</div>
+
+<p class="text-title"> Are you sure you want to delete <strong>{{item.title}}</strong> ? </p>
+</br>
+<form action="#" method = 'post'>
+
+	<button type="submit" class="btn btn-danger" id="submit" type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+	<a class="btn btn-primary" href= '{{url_for('itemDescription',item_id = item.id)}}' >
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel
+	</a>
+
+</form>
+
+{% endblock %}
